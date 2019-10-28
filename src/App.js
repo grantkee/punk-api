@@ -28,7 +28,7 @@ class App extends Component {
       name: `${beer.name}`,
       tagline: `${beer.tagline}`,
       abv: `${beer.abv}`,
-      ibu: `${beer.ibu}`,
+      ibu: `${beer.ibu}`
       // mash_temp_value_c: `${beer.method.mash_temp.temp.value}`
     })))
     .then(beers => this.setState({
@@ -49,8 +49,9 @@ class App extends Component {
               // how to do if statement everything is wrapped in????
               !isLoading && beers.length > 0 ? beers.map(beer => {
                 const {name, tagline, abv, ibu} = beer;
-                return <div key={beer} title={name}>
-                  <p>Name: {name} <input type="checkbox" name="like">Like</input></p>
+                return <div key={beer.name} title={name}>
+                  <p>Name: {name}</p> 
+                  {/* <input type="checkbox" name="like">Like</input> */}
                   {/* <button><img src={logo} alt="like" className="img-responsive"></img></button> */}
                   <p>Tagline: {tagline}</p>
                   <p>ABV: {abv}</p>
@@ -66,26 +67,5 @@ class App extends Component {
     )
   }
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;
