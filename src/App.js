@@ -55,7 +55,6 @@ class App extends Component {
                 const {name, tagline, abv, ibu, image} = beer;
                 return <div key={beer.id} title={name} className="beer-div">
                     <p>Name: {name} <button type="button" className="like-button" onClick={this.isLiked}>Like</button></p> 
-                    {/* <button><img src={logo} alt="like" className="img-responsive"></img></button> */}
                     <p>Tagline: {tagline}</p>
                     <p>ABV: {abv}</p>
                     <p>IBU: {ibu}</p>
